@@ -12,6 +12,7 @@ import reactor.rabbitmq.*;
 
 @Configuration
 public class RabbitMqConfig {
+    //small change to review something
 
     public static final String TOPIC_EXCHANGE = "tasks-topic-exchange";
     public static final String QUEUE_EVENTS_GENERAL = "tasks.events.general";

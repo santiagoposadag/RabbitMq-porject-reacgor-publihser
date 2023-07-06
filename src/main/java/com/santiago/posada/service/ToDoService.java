@@ -27,7 +27,11 @@ public class ToDoService {
 
 
     public Mono<Author> createUser(Author author){
-        return authorRepository.save(author);
+        return authorRepository.save(author).onErrorMap(error -> new InternalError(error.getMessage()))
+                .map(author1 -> {
+                    System.out.println(author1);
+                    return author1;
+                });
     }
 
 

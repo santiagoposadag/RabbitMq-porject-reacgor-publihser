@@ -1,7 +1,7 @@
 package com.santiago.posada.configuration;
 
 
-import com.rabbitmq.client.AMQP;
+
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 import org.springframework.context.annotation.Bean;
@@ -21,6 +21,7 @@ public class RabbitMqConfig {
     public static final String ROUTING_KEY_EVENTS_GENERAL = "routingkey.tasks.events.#";
     public static final String ROUTING_KEY_EVENTS_TASK_CREATED = "routingkey.tasks.events.task.created";
     public static final String ROUTING_KEY_EVENTS_AUTHOR_CREATED = "routingkey.tasks.events.author.created";
+
 
     @Bean
     public Mono<Connection> createConnectionToRabbit(){
